@@ -1,61 +1,61 @@
-partner_id,partner,type,region,quarter,target_inr_lakh,revenue_inr_lakh,pipeline_inr_lakh,deals_won,deals_lost,avg_cycle_days,certified_reps,qbr_attended,portal_logins
-P001,Arcline,Reseller,SEA,2026-Q1,118.0,67.9,195.3,11,8,56,0,1,8
-P001,Arcline,Reseller,SEA,2026-Q2,118.0,30.5,89.9,5,7,61,0,1,0
-P002,Bluefin,Reseller,SEA,2026-Q1,84.5,50.2,144.1,12,10,53,0,1,40
-P002,Bluefin,Reseller,SEA,2026-Q2,84.5,43.9,151.1,10,10,58,0,1,45
-P003,Cedar Systems,Referral,India,2026-Q1,13.5,7.6,21.2,1,1,73,5,1,31
-P003,Cedar Systems,Referral,India,2026-Q2,13.5,7.5,12.0,1,1,83,5,1,36
-P004,Delta Edge,ISV,SEA,2026-Q1,32.5,25.4,41.9,4,3,46,6,1,8
-P004,Delta Edge,ISV,SEA,2026-Q2,32.5,31.7,104.3,5,4,48,6,1,9
-P005,Everspring,Referral,India,2026-Q1,21.4,23.9,88.6,8,18,93,6,1,34
-P005,Everspring,Referral,India,2026-Q2,21.4,28.6,113.3,9,23,91,6,1,39
-P006,Fortis,Referral,India,2026-Q1,12.0,12.3,37.3,5,4,56,2,1,21
-P006,Fortis,Referral,India,2026-Q2,12.0,29.6,78.1,14,7,64,2,1,41
-P007,Greywave,ISV,India,2026-Q1,36.0,31.8,47.8,6,15,57,3,1,13
-P007,Greywave,ISV,India,2026-Q2,36.0,28.3,47.5,5,14,58,3,1,5
-P008,Helix Tech,ISV,India,2026-Q1,34.6,20.5,68.6,3,2,97,3,1,22
-P008,Helix Tech,ISV,India,2026-Q2,34.6,23.1,89.5,4,2,99,3,1,20
-P009,Ironbark,Reseller,UAE,2026-Q1,95.2,122.1,345.8,15,16,74,4,1,26
-P009,Ironbark,Reseller,UAE,2026-Q2,95.2,119.9,421.5,14,17,75,4,1,24
-P010,Juniper Cloud,ISV,SEA,2026-Q1,39.7,20.8,80.8,9,19,67,1,1,41
-P010,Juniper Cloud,ISV,SEA,2026-Q2,39.7,19.5,45.7,8,20,69,1,1,39
-P011,Kestrel,ISV,SEA,2026-Q1,46.1,26.2,91.7,3,2,68,3,1,14
-P011,Kestrel,ISV,SEA,2026-Q2,46.1,26.4,87.5,3,2,56,3,0,8
-P012,Lumen Works,Reseller,SEA,2026-Q1,87.3,101.3,285.4,11,12,89,1,1,38
-P012,Lumen Works,Reseller,SEA,2026-Q2,87.3,103.7,162.8,11,10,75,1,1,36
-P013,Meridian,ISV,UAE,2026-Q1,30.4,35.5,64.8,14,14,87,5,1,40
-P013,Meridian,ISV,UAE,2026-Q2,30.4,35.5,107.1,14,14,101,5,0,10
-P014,Northgate,Reseller,UAE,2026-Q1,77.9,81.5,225.6,14,21,49,4,1,6
-P014,Northgate,Reseller,UAE,2026-Q2,77.9,99.0,298.4,17,26,45,4,1,14
-P015,Orbit Labs,Referral,India,2026-Q1,19.7,20.9,51.9,2,1,66,4,1,15
-P015,Orbit Labs,Referral,India,2026-Q2,19.7,23.4,74.2,2,1,74,4,1,13
-P016,Pinnacle,Reseller,UAE,2026-Q1,115.2,138.9,264.4,15,37,47,3,1,34
-P016,Pinnacle,Reseller,UAE,2026-Q2,115.2,146.7,350.9,16,42,43,3,1,32
-P017,Quartz,Referral,India,2026-Q1,20.2,16.3,35.5,2,4,48,0,1,17
-P017,Quartz,Referral,India,2026-Q2,20.2,15.0,54.5,2,3,45,0,1,22
-P018,Riverstone,Referral,UAE,2026-Q1,19.8,21.0,73.6,7,24,53,3,1,7
-P018,Riverstone,Referral,UAE,2026-Q2,19.8,18.4,28.1,7,19,66,3,1,13
-P019,Solaris,Referral,SEA,2026-Q1,13.9,14.8,41.9,1,0,64,0,1,14
-P019,Solaris,Referral,SEA,2026-Q2,13.9,15.3,36.1,1,0,61,0,1,14
-P020,Tidewater,Referral,India,2026-Q1,8.4,7.7,30.1,2,3,116,6,1,44
-P020,Tidewater,Referral,India,2026-Q2,8.4,7.2,25.7,1,1,128,6,1,42
-P021,Umbra,ISV,India,2026-Q1,59.3,30.3,96.3,4,3,87,1,0,6
-P021,Umbra,ISV,India,2026-Q2,59.3,21.2,46.1,3,2,81,1,1,11
-P022,Vantage,Referral,UAE,2026-Q1,20.0,13.5,46.5,4,7,41,3,1,20
-P022,Vantage,Referral,UAE,2026-Q2,20.0,15.9,39.5,4,9,43,3,1,13
-P023,Westbrook,ISV,India,2026-Q1,41.2,42.2,139.8,6,4,89,6,1,23
-P023,Westbrook,ISV,India,2026-Q2,41.2,36.6,112.4,5,3,91,6,1,31
-P024,Xenon,ISV,India,2026-Q1,40.2,46.6,181.9,7,5,116,1,1,8
-P024,Xenon,ISV,India,2026-Q2,40.2,40.6,110.6,6,5,105,1,1,7
-P025,Yardley,ISV,SEA,2026-Q1,23.7,13.1,43.8,1,2,50,6,1,19
-P025,Yardley,ISV,SEA,2026-Q2,23.7,13.7,51.8,1,2,42,6,1,26
-P026,Zephyr,Reseller,India,2026-Q1,89.4,68.4,268.9,10,10,105,4,0,11
-P026,Zephyr,Reseller,India,2026-Q2,89.4,71.5,190.4,10,10,115,4,0,12
-P027,Altura,ISV,India,2026-Q1,57.5,42.0,70.9,16,23,84,2,1,27
-P027,Altura,ISV,India,2026-Q2,57.5,48.3,88.5,19,31,101,2,1,30
-P028,Brightpath,ISV,UAE,2026-Q1,34.6,42.2,99.5,7,26,34,3,1,31
-P028,Brightpath,ISV,UAE,2026-Q2,34.6,50.0,179.9,9,47,32,3,1,33
-P029,Crestline,Reseller,UAE,2026-Q1,97.0,53.6,94.0,11,9,48,2,1,30
-P029,Crestline,Reseller,UAE,2026-Q2,97.0,51.7,202.9,10,6,44,2,1,29
-P030,Dunmore,Referral,India,2026-Q1,16.2,18.6,49.0,2,1,114,4,1,16
-P030,Dunmore,Referral,India,2026-Q2,16.2,20.6,78.0,3,2,108,4,0,9
+partner_id,partner,type,region,quarter,target_gmv_aed_k,gmv_aed_k,orders,fulfilment_pct,repeat_rate_pct,on_time_pct,tools_adopted,review_attended,portal_logins
+P001,Al Noor Kitchen,Merchant,UAE,2026-Q1,1800.0,2082.6,46280,85.7,18.8,89.0,1,1,5
+P001,Al Noor Kitchen,Merchant,UAE,2026-Q2,1800.0,937.2,20826,86.5,6.8,93.0,1,0,0
+P002,Bluefin Fleet,Fleet partner,KSA,2026-Q1,479.3,350.7,12526,73.2,20.8,73.2,5,1,14
+P002,Bluefin Fleet,Fleet partner,KSA,2026-Q2,479.3,375.0,13391,73.9,17.3,74.2,5,1,7
+P003,Cedar Grocers,Merchant,Egypt,2026-Q1,1232.7,911.9,20265,88.9,46.8,70.6,4,1,22
+P003,Cedar Grocers,Merchant,Egypt,2026-Q2,1232.7,1132.7,25171,86.9,43.7,71.1,4,1,27
+P004,Delta Motors,Fleet partner,UAE,2026-Q1,1074.7,1194.7,42668,93.6,37.9,71.0,5,1,25
+P004,Delta Motors,Fleet partner,UAE,2026-Q2,1074.7,1060.2,37865,91.0,36.1,76.0,5,1,19
+P005,Everspring Cafe,Merchant,Egypt,2026-Q1,1076.6,1155.5,25677,79.4,50.5,95.4,2,1,13
+P005,Everspring Cafe,Merchant,Egypt,2026-Q2,1076.6,1041.9,23153,81.9,48.5,93.2,2,1,17
+P006,Fortis Perks,Brand partner,KSA,2026-Q1,120.0,138.7,1540,77.5,49.6,74.7,2,1,27
+P006,Fortis Perks,Brand partner,KSA,2026-Q2,120.0,332.8,3697,76.1,59.6,73.5,2,1,47
+P007,Greywave Logistics,Fleet partner,KSA,2026-Q1,990.8,1042.7,37239,86.7,35.6,84.5,0,1,32
+P007,Greywave Logistics,Fleet partner,KSA,2026-Q2,990.8,1050.7,37524,84.0,35.5,81.8,0,1,36
+P008,Helix Pharmacy,Merchant,UAE,2026-Q1,550.5,320.3,7118,84.5,37.7,90.7,4,0,4
+P008,Helix Pharmacy,Merchant,UAE,2026-Q2,550.5,316.8,7040,82.2,36.6,93.4,4,1,0
+P009,Ironbark Burgers,Merchant,Egypt,2026-Q1,876.5,957.4,21274,88.7,34.1,82.6,1,1,36
+P009,Ironbark Burgers,Merchant,Egypt,2026-Q2,876.5,927.9,20620,89.9,35.3,78.6,1,1,30
+P010,Juniper Rides,Fleet partner,Egypt,2026-Q1,667.3,673.4,24049,91.3,39.5,85.3,1,1,18
+P010,Juniper Rides,Fleet partner,Egypt,2026-Q2,667.3,705.1,25182,93.0,41.4,87.5,1,0,10
+P011,Kestrel Bakery,Merchant,Egypt,2026-Q1,1026.2,1297.1,28823,76.0,29.6,71.6,1,1,24
+P011,Kestrel Bakery,Merchant,Egypt,2026-Q2,1026.2,1441.3,32028,78.0,32.0,68.8,1,1,18
+P012,Lumen Telecom,Brand partner,KSA,2026-Q1,143.8,121.8,1353,72.3,40.4,95.2,5,1,28
+P012,Lumen Telecom,Brand partner,KSA,2026-Q2,143.8,111.8,1242,72.9,37.4,93.1,5,1,24
+P013,Meridian Mart,Merchant,Pakistan,2026-Q1,1087.0,1115.1,24779,84.8,29.0,68.4,0,1,44
+P013,Meridian Mart,Merchant,Pakistan,2026-Q2,1087.0,1115.1,24779,82.0,29.0,66.6,0,1,14
+P014,Northgate Fleet,Fleet partner,Pakistan,2026-Q1,1621.9,1893.3,67618,90.0,17.4,89.0,5,1,40
+P014,Northgate Fleet,Fleet partner,Pakistan,2026-Q2,1621.9,1724.3,61582,91.6,17.5,92.8,5,1,46
+P015,Orbit Sweets,Merchant,UAE,2026-Q1,1231.2,1163.8,25861,84.0,28.0,83.8,0,1,38
+P015,Orbit Sweets,Merchant,UAE,2026-Q2,1231.2,1225.5,27233,83.7,28.5,82.6,0,1,32
+P016,Pinnacle Cars,Fleet partner,Pakistan,2026-Q1,1219.5,1105.5,39481,83.7,47.3,75.1,4,1,19
+P016,Pinnacle Cars,Fleet partner,Pakistan,2026-Q2,1219.5,1000.3,35724,82.6,44.3,73.8,4,1,25
+P017,Quartz Bank,Brand partner,UAE,2026-Q1,176.9,215.4,2393,89.3,21.2,86.8,1,1,19
+P017,Quartz Bank,Brand partner,UAE,2026-Q2,176.9,191.2,2124,92.3,24.3,87.5,1,1,16
+P018,Riverstone Foods,Merchant,Egypt,2026-Q1,493.8,413.3,9184,72.5,29.3,74.6,2,1,38
+P018,Riverstone Foods,Merchant,Egypt,2026-Q2,493.8,454.4,10098,70.2,29.4,79.3,2,1,32
+P019,Solaris Fitness,Brand partner,Egypt,2026-Q1,106.9,56.8,631,77.3,46.2,69.5,3,1,19
+P019,Solaris Fitness,Brand partner,Egypt,2026-Q2,106.9,64.2,713,79.1,42.9,66.4,3,1,12
+P020,Tidewater Fleet,Fleet partner,Egypt,2026-Q1,426.9,242.1,8645,71.8,49.2,91.9,3,0,3
+P020,Tidewater Fleet,Fleet partner,Egypt,2026-Q2,426.9,230.0,8212,53.8,46.2,88.3,3,1,8
+P021,Umbra Flowers,Merchant,Pakistan,2026-Q1,1054.4,949.0,21089,79.4,22.1,65.7,2,0,5
+P021,Umbra Flowers,Merchant,Pakistan,2026-Q2,1054.4,976.4,21697,80.3,23.4,65.9,2,1,10
+P022,Vantage Pay,Brand partner,KSA,2026-Q1,148.9,115.2,1280,89.1,48.3,80.6,3,1,25
+P022,Vantage Pay,Brand partner,KSA,2026-Q2,148.9,132.1,1467,86.4,46.3,85.4,3,1,22
+P023,Westbrook Grill,Merchant,KSA,2026-Q1,757.1,798.1,17734,75.0,16.8,71.0,0,1,19
+P023,Westbrook Grill,Merchant,KSA,2026-Q2,757.1,986.6,21924,73.1,15.3,71.8,0,1,22
+P024,Xenon Electronics,Merchant,KSA,2026-Q1,400.7,362.1,8047,77.1,15.2,68.7,3,1,40
+P024,Xenon Electronics,Merchant,KSA,2026-Q2,400.7,320.0,7111,78.1,18.9,69.4,3,1,36
+P025,Yardley Fleet,Fleet partner,Pakistan,2026-Q1,1023.2,634.0,22641,87.4,44.0,63.4,5,1,35
+P025,Yardley Fleet,Fleet partner,Pakistan,2026-Q2,1023.2,671.7,23988,89.3,44.0,67.0,5,1,27
+P026,Zephyr Cinemas,Brand partner,KSA,2026-Q1,301.9,171.5,1905,87.2,16.7,93.7,3,1,31
+P026,Zephyr Cinemas,Brand partner,KSA,2026-Q2,301.9,146.0,1622,89.6,19.1,90.5,3,1,39
+P027,Altura Shawarma,Merchant,UAE,2026-Q1,931.2,1095.9,24353,90.4,24.4,75.2,5,1,32
+P027,Altura Shawarma,Merchant,UAE,2026-Q2,931.2,1057.5,23499,87.9,20.8,69.1,5,1,30
+P028,Brightpath Rentals,Fleet partner,KSA,2026-Q1,1589.1,810.4,28943,77.3,17.4,83.4,5,1,16
+P028,Brightpath Rentals,Fleet partner,KSA,2026-Q2,1589.1,839.9,29996,76.1,19.6,81.8,5,1,14
+P029,Crestline Pizza,Merchant,Pakistan,2026-Q1,867.5,1123.6,24969,94.7,30.5,96.5,0,1,40
+P029,Crestline Pizza,Merchant,Pakistan,2026-Q2,867.5,1014.7,22548,93.4,33.0,89.8,0,1,48
+P030,Dunmore Pets,Merchant,Pakistan,2026-Q1,738.2,383.8,8528,83.3,15.1,81.2,2,0,12
+P030,Dunmore Pets,Merchant,Pakistan,2026-Q2,738.2,441.5,9810,85.9,17.9,76.1,2,0,7

@@ -1,49 +1,50 @@
-"""Self-generated dummy partner data: 30 partners x 2 quarters. No real companies."""
+"""Self-generated dummy partner data: 30 partners x 2 quarters. No real companies.
+Careem-style book: merchants, fleet partners, brand partners across UAE, KSA, Egypt, Pakistan."""
 import csv, random
 
 random.seed(7)
-TYPES = ["Reseller", "Referral", "ISV"]
-REGIONS = ["India", "UAE", "SEA"]
-NAMES = ["Arcline", "Bluefin", "Cedar Systems", "Delta Edge", "Everspring", "Fortis", "Greywave", "Helix Tech",
-         "Ironbark", "Juniper Cloud", "Kestrel", "Lumen Works", "Meridian", "Northgate", "Orbit Labs", "Pinnacle",
-         "Quartz", "Riverstone", "Solaris", "Tidewater", "Umbra", "Vantage", "Westbrook", "Xenon", "Yardley", "Zephyr",
-         "Altura", "Brightpath", "Crestline", "Dunmore"]
+REGIONS = ["UAE", "KSA", "Egypt", "Pakistan"]
+M, F, B = "Merchant", "Fleet partner", "Brand partner"
+NAMES = [("Al Noor Kitchen", M), ("Bluefin Fleet", F), ("Cedar Grocers", M), ("Delta Motors", F), ("Everspring Cafe", M),
+         ("Fortis Perks", B), ("Greywave Logistics", F), ("Helix Pharmacy", M), ("Ironbark Burgers", M), ("Juniper Rides", F),
+         ("Kestrel Bakery", M), ("Lumen Telecom", B), ("Meridian Mart", M), ("Northgate Fleet", F), ("Orbit Sweets", M),
+         ("Pinnacle Cars", F), ("Quartz Bank", B), ("Riverstone Foods", M), ("Solaris Fitness", B), ("Tidewater Fleet", F),
+         ("Umbra Flowers", M), ("Vantage Pay", B), ("Westbrook Grill", M), ("Xenon Electronics", M), ("Yardley Fleet", F),
+         ("Zephyr Cinemas", B), ("Altura Shawarma", M), ("Brightpath Rentals", F), ("Crestline Pizza", M), ("Dunmore Pets", M)]
 
-# Planted stories (index: multiplier for Q2 revenue, win rate shift, logins shift)
+# Planted stories: Q2 multipliers / shifts vs Q1
 STORIES = {
-    0: dict(rev=0.45, win=-0.15, logins=-25, note="big reseller going cold", type="Reseller", target=118.0),
-    5: dict(rev=2.4, win=0.12, logins=20, note="small referral partner accelerating", type="Referral", target=12.0),
-    12: dict(rev=1.0, win=0.0, logins=-30, note="hitting numbers but disengaged"),
-    20: dict(rev=0.7, win=-0.05, logins=5, note="busy but not closing"),
+    "Al Noor Kitchen": dict(gmv=0.45, repeat=-12, logins=-25, note="big merchant going cold", target=1800.0),
+    "Fortis Perks": dict(gmv=2.4, repeat=10, logins=20, note="small brand partner accelerating", target=120.0),
+    "Meridian Mart": dict(gmv=1.0, repeat=0, logins=-30, note="hitting numbers but disengaged"),
+    "Tidewater Fleet": dict(gmv=0.95, repeat=-3, logins=5, note="busy fleet, poor fulfilment", fulfil=-18),
 }
 
 def row(i, name, q, base):
-    s = STORIES.get(i, dict(rev=random.uniform(0.85, 1.25), win=random.uniform(-0.05, 0.05), logins=random.randint(-8, 8)))
-    target = base["target"]
-    revenue = base["revenue"] * (1 if q == "2026-Q1" else s["rev"])
-    win = min(0.9, max(0.05, base["win"] + (0 if q == "2026-Q1" else s["win"])))
-    deals = max(1, int(revenue / base["deal_size"]))
-    lost = max(0, int(deals / win - deals))
-    logins = max(0, base["logins"] + (0 if q == "2026-Q1" else s["logins"]))
+    s = STORIES.get(name, dict(gmv=random.uniform(0.85, 1.25), repeat=random.uniform(-4, 4), logins=random.randint(-8, 8)))
+    q2 = q == "2026-Q2"
+    gmv = base["gmv"] * (s["gmv"] if q2 else 1)
+    repeat = min(75, max(5, base["repeat"] + (s["repeat"] if q2 else 0)))
+    fulfil = min(99, max(40, base["fulfil"] + (s.get("fulfil", random.uniform(-3, 3)) if q2 else 0)))
+    logins = max(0, base["logins"] + (s["logins"] if q2 else 0))
     return dict(
         partner_id=f"P{i+1:03d}", partner=name, type=base["type"], region=base["region"], quarter=q,
-        target_inr_lakh=round(target, 1), revenue_inr_lakh=round(revenue, 1),
-        pipeline_inr_lakh=round(revenue * random.uniform(1.5, 4.0), 1),
-        deals_won=deals, deals_lost=lost,
-        avg_cycle_days=int(base["cycle"] * random.uniform(0.9, 1.15)),
-        certified_reps=base["reps"], qbr_attended=1 if logins > 12 or random.random() > 0.3 else 0,
+        target_gmv_aed_k=round(base["target"], 1), gmv_aed_k=round(gmv, 1),
+        orders=int(gmv * 1000 / base["ticket"]),
+        fulfilment_pct=round(fulfil, 1), repeat_rate_pct=round(repeat, 1),
+        on_time_pct=round(min(99, max(50, base["on_time"] + random.uniform(-4, 4))), 1),
+        tools_adopted=base["tools"], review_attended=1 if logins > 12 or random.random() > 0.3 else 0,
         portal_logins=logins,
     )
 
 rows = []
-for i, name in enumerate(NAMES):
-    t = STORIES.get(i, {}).get("type", random.choice(TYPES))
-    target = {"Reseller": random.uniform(40, 120), "Referral": random.uniform(8, 30), "ISV": random.uniform(20, 60)}[t]
-    target = STORIES.get(i, {}).get("target", target)
+for i, (name, t) in enumerate(NAMES):
+    target = {"Merchant": random.uniform(300, 1500), "Fleet partner": random.uniform(400, 2000), "Brand partner": random.uniform(80, 400)}[t]
+    target = STORIES.get(name, {}).get("target", target)
     base = dict(type=t, region=random.choice(REGIONS), target=target,
-                revenue=target * random.uniform(0.5, 1.3), deal_size=random.uniform(2, 9),
-                win=random.uniform(0.2, 0.6), cycle=random.randint(35, 120), reps=random.randint(0, 6),
-                logins=random.randint(3, 45))
+                gmv=target * random.uniform(0.5, 1.3), ticket={"Merchant": 45, "Fleet partner": 28, "Brand partner": 90}[t],
+                repeat=random.uniform(15, 55), fulfil=random.uniform(70, 97), on_time=random.uniform(65, 95),
+                tools=random.randint(0, 5), logins=random.randint(3, 45))
     for q in ("2026-Q1", "2026-Q2"):
         rows.append(row(i, name, q, base))
 

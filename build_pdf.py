@@ -42,7 +42,7 @@ y = para(summary, W - 2 * m, y) - 3 * mm
 ov = Image.open("shots/overview.png").crop((0, 0, 3000, 1700))
 dd = Image.open("shots/drilldown.png").crop((640, 720, 2900, 1675))
 shots = ((ov, "Portfolio view: weight sliders, Invest / Protect / Fix / Exit, score vs quarter-on-quarter trend, leaderboard."),
-         (dd, "Drill-down: the planted 'big reseller going cold' story, the metric-by-metric reason for its score, and the recommended actions."))
+         (dd, "Drill-down: the planted 'big merchant going cold' story, the metric-by-metric reason for its score, and the recommended actions."))
 avail = y - m - 12 * mm - 2 * 10 * mm  # footer + two captions
 total_ratio = sum(i.size[1] / i.size[0] for i, _ in shots)
 w = min(W - 2 * m, avail / total_ratio)
@@ -52,5 +52,5 @@ for img, cap in shots:
     c.setFont("Helvetica-Oblique", 8.5); c.setFillGray(0.35); c.drawString(m, y, cap); c.setFillGray(0); y -= 6 * mm
 
 c.setFont("Helvetica", 8.5); c.setFillGray(0.4)
-c.drawString(m, m - 4 * mm, "Data is self-generated (30 partners, two quarters). No real companies or confidential information. Built with Streamlit, pandas and the Claude API.")
+c.drawString(m, m - 4 * mm, "Self-generated data: 30 merchants, fleet and brand partners, two quarters. No real companies or confidential information. Streamlit, pandas, Claude API.")
 c.save(); print("Partner_Performance_Scorer.pdf")

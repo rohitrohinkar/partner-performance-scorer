@@ -1,25 +1,29 @@
-"""Pure, explainable scoring rules. No Streamlit, no LLM, so it can be unit-tested and audited."""
+"""Pure, explainable scoring rules. No Streamlit, no LLM, so it can be unit-tested and audited.
+
+Vocabulary follows a Careem-style partner book: merchants (food, grocery, retail), fleet partners
+(vehicle suppliers behind captains) and brand partners (perks, co-marketing, payments).
+"""
 import pandas as pd
 
 METRICS = {  # key: (label, default weight, help)
-    "attainment": ("Revenue attainment", 30, "Revenue vs target, capped at 150%"),
-    "coverage": ("Pipeline coverage", 15, "Sourced pipeline vs target; 3x = full marks"),
-    "win_rate": ("Win rate", 20, "Won / (won + lost)"),
-    "velocity": ("Deal velocity", 10, "Average cycle; 30 days = full marks, 120 = zero"),
-    "enablement": ("Certified reps", 10, "Certified reps; 5+ = full marks"),
-    "engagement": ("Engagement", 15, "QBR attended + portal logins"),
+    "attainment": ("GMV attainment", 30, "GMV vs target, capped at 150%"),
+    "fulfilment": ("Fulfilment rate", 15, "Orders or trips completed vs received"),
+    "repeat": ("Repeat rate", 20, "Share of customers who come back; 60% = full marks"),
+    "on_time": ("On-time rate", 10, "Orders delivered or trips started within the promised window"),
+    "tools": ("Tools adopted", 10, "Careem partner tools in use (menu sync, promos, API, payouts, insights); 5 = full marks"),
+    "engagement": ("Engagement", 15, "Business review attended + partner portal logins"),
 }
 
 
 def normalise(df):
     """Each metric to a 0..100 scale."""
     out = pd.DataFrame(index=df.index)
-    out["attainment"] = (df.revenue_inr_lakh / df.target_inr_lakh).clip(0, 1.5) / 1.5 * 100
-    out["coverage"] = (df.pipeline_inr_lakh / df.target_inr_lakh).clip(0, 3) / 3 * 100
-    out["win_rate"] = df.deals_won / (df.deals_won + df.deals_lost).clip(lower=1) * 100
-    out["velocity"] = ((120 - df.avg_cycle_days) / 90).clip(0, 1) * 100
-    out["enablement"] = df.certified_reps.clip(0, 5) / 5 * 100
-    out["engagement"] = df.qbr_attended * 50 + df.portal_logins.clip(0, 25) * 2
+    out["attainment"] = (df.gmv_aed_k / df.target_gmv_aed_k).clip(0, 1.5) / 1.5 * 100
+    out["fulfilment"] = df.fulfilment_pct.clip(0, 100)
+    out["repeat"] = (df.repeat_rate_pct / 60).clip(0, 1) * 100
+    out["on_time"] = df.on_time_pct.clip(0, 100)
+    out["tools"] = df.tools_adopted.clip(0, 5) / 5 * 100
+    out["engagement"] = df.review_attended * 50 + df.portal_logins.clip(0, 25) * 2
     return out.round(1)
 
 

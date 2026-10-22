@@ -1,9 +1,9 @@
 import pandas as pd
 from scoring import normalise, score, quadrant, METRICS
-df = pd.DataFrame([dict(revenue_inr_lakh=150, target_inr_lakh=100, pipeline_inr_lakh=300, deals_won=3, deals_lost=0,
-                        avg_cycle_days=30, certified_reps=5, qbr_attended=1, portal_logins=25),
-                   dict(revenue_inr_lakh=0, target_inr_lakh=100, pipeline_inr_lakh=0, deals_won=0, deals_lost=0,
-                        avg_cycle_days=120, certified_reps=0, qbr_attended=0, portal_logins=0)])
+df = pd.DataFrame([dict(gmv_aed_k=150, target_gmv_aed_k=100, fulfilment_pct=100, repeat_rate_pct=60, on_time_pct=100,
+                        tools_adopted=5, review_attended=1, portal_logins=25),
+                   dict(gmv_aed_k=0, target_gmv_aed_k=100, fulfilment_pct=0, repeat_rate_pct=0, on_time_pct=0,
+                        tools_adopted=0, review_attended=0, portal_logins=0)])
 n = normalise(df)
 w = {m: v[1] for m, v in METRICS.items()}
 s = score(n, w)
