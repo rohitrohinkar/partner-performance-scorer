@@ -4,6 +4,8 @@ Scores a Careem-style partner book (merchants, fleet partners, brand partners) w
 
 **Idea in one line:** scoring should be deterministic so people can argue with it; AI should do the narrative.
 
+**Live app:** https://partner-scorer.streamlit.app
+
 ## Run locally
 
 ```bash
