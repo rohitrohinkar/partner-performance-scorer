@@ -1,0 +1,3 @@
+# Partner Performance Scorer: 100-word summary
+
+Partner managers do not trust black-box scores and finance cannot audit them, so I split the job in two. A deterministic scorecard rates every partner on six inputs I have managed in real partner books: revenue attainment, pipeline coverage, win rate, deal velocity, certified reps and engagement. Weights are sliders, so the model is a tool, not a verdict. Score and quarter-on-quarter trend place each partner in Invest, Protect, Fix or Exit. AI only writes three improvement actions tied to the weakest metrics and a QBR brief. Thirty self-generated partners, two quarters. Code, dataset and live app are public.
