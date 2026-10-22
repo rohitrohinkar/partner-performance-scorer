@@ -4,13 +4,15 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title="Partner Performance Scorer", page_icon="📊", layout="wide")
+HERE = os.path.dirname(os.path.abspath(__file__))
+st.logo(os.path.join(HERE, "assets", "careem.png"), size="large")
 
 from scoring import METRICS, normalise, score, quadrant
 
 
 @st.cache_data
 def load():
-    return pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "partners.csv"))
+    return pd.read_csv(os.path.join(HERE, "partners.csv"))
 
 
 def rule_actions(name, norm_row):

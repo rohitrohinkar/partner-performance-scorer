@@ -40,7 +40,7 @@ y = para(summary, W - 2 * m, y) - 3 * mm
 
 # crop each screenshot to the part that matters, then fit both into the space left on the page
 ov = Image.open("shots/overview.png").crop((0, 0, 3000, 1700))
-dd = Image.open("shots/drilldown.png").crop((640, 640, 2900, 1620))
+dd = Image.open("shots/drilldown.png").crop((640, 720, 2900, 1720))
 shots = ((ov, "Portfolio view: weight sliders, Invest / Protect / Fix / Exit, score vs quarter-on-quarter trend, leaderboard."),
          (dd, "Drill-down: the planted 'big reseller going cold' story, the metric-by-metric reason for its score, and the recommended actions."))
 avail = y - m - 12 * mm - 2 * 10 * mm  # footer + two captions
