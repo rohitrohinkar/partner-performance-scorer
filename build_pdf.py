@@ -52,5 +52,5 @@ for img, cap in shots:
     c.setFont("Helvetica-Oblique", 8.5); c.setFillGray(0.35); c.drawString(m, y, cap); c.setFillGray(0); y -= 6 * mm
 
 c.setFont("Helvetica", 8.5); c.setFillGray(0.4)
-c.drawString(m, m - 4 * mm, "Self-generated data: 30 merchants, fleet and brand partners, two quarters. No real companies or confidential information. Streamlit, pandas, Claude API.")
+c.drawString(m, m - 4 * mm, "Self-generated data, 30 partners, two quarters. No real companies or confidential information. Streamlit, pandas, Claude API.")
 c.save(); print("Partner_Performance_Scorer.pdf")
